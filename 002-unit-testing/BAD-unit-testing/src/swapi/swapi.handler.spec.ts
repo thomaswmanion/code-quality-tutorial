@@ -1,3 +1,4 @@
+import 'mocha';
 import { swapiHandler } from './swapi.handler';
 import { expect } from 'chai';
 
