@@ -1,0 +1,29 @@
+{
+    "name": "bad-unit-testing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "ts-node src/server",
+        "coverage": "nyc --include \"src/**/*.ts\" --exclude \"src/**/*.spec.ts\" --all mocha --require ts-node/register --require source-map-support/register --check-coverage --lines 50 --recursive \"src/**/*.spec.ts\"",
+        "test": "mocha --require ts-node/register \"src/**/*.spec.ts\"",
+        "tdd": "mocha --watch=true --watch-files=\"src/**/*.ts\" --check-leaks=true --watch-extensions ts --require ts-node/register \"src/**/*.spec.ts\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@hapi/hapi": "^20.1.0",
+        "axios": "^0.21.1",
+        "typescript": "^4.1.3"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.2.15",
+        "@types/hapi__hapi": "^20.0.5",
+        "@types/mocha": "^8.2.2",
+        "chai": "^4.3.4",
+        "mocha": "^8.3.2",
+        "npm": "^7.5.3",
+        "nyc": "^15.1.0",
+        "ts-node": "^9.1.1"
+    }
+}
